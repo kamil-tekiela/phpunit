@@ -208,6 +208,9 @@ if (!function_exists('PHPUnit\Framework\assertArraysAreIdentical')) {
      * The (key, value) relationship matters, the order of the (key, value) pairs in the array matters, and keys as well as values are compared strictly.
      * This is essentially an alias for assertSame().
      *
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
+     *
      * @throws ExpectationFailedException
      *
      * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -226,6 +229,9 @@ if (!function_exists('PHPUnit\Framework\assertArraysAreEqual')) {
      *
      * The (key, value) relationship matters, the order of the (key, value) pairs in the array matters, and keys as well as values are compared loosely.
      *
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
+     *
      * @throws ExpectationFailedException
      *
      * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -243,6 +249,9 @@ if (!function_exists('PHPUnit\Framework\assertArraysAreIdenticalIgnoringOrder'))
      * Assert that two arrays are identical while ignoring the order of their values.
      *
      * The (key, value) relationship matters, the order of the (key, value) pairs in the array does not matter, and keys as well as values are compared strictly.
+     *
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
      *
      * @throws ExpectationFailedException
      *
@@ -263,6 +272,9 @@ if (!function_exists('PHPUnit\Framework\assertArraysAreEqualIgnoringOrder')) {
      * The (key, value) relationship matters, the order of the (key, value) pairs in the array does not matter, and keys as well as values are compared loosely.
      * This is essentially an alias for assertEquals().
      *
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
+     *
      * @throws ExpectationFailedException
      *
      * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -280,6 +292,9 @@ if (!function_exists('PHPUnit\Framework\assertArraysHaveIdenticalValues')) {
      * Assert that two arrays have identical values.
      *
      * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array matters, and values are compared strictly.
+     *
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
      *
      * @throws ExpectationFailedException
      *
@@ -299,6 +314,9 @@ if (!function_exists('PHPUnit\Framework\assertArraysHaveEqualValues')) {
      *
      * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array matters, and values are compared loosely.
      *
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
+     *
      * @throws ExpectationFailedException
      *
      * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -317,6 +335,9 @@ if (!function_exists('PHPUnit\Framework\assertArraysHaveIdenticalValuesIgnoringO
      *
      * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array does not matter, and values are compared strictly.
      *
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
+     *
      * @throws ExpectationFailedException
      *
      * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -334,6 +355,9 @@ if (!function_exists('PHPUnit\Framework\assertArraysHaveEqualValuesIgnoringOrder
      * Assert that two arrays have equal values while ignoring the order of these values.
      *
      * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array does not matter, and values are compared loosely.
+     *
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
      *
      * @throws ExpectationFailedException
      *
