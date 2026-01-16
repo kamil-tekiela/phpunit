@@ -208,6 +208,99 @@ abstract class Assert
     }
 
     /**
+     * Assert that two arrays are identical.
+     *
+     * The (key, value) relationship matters, the order of the (key, value) pairs in the array matters, and keys as well as values are compared strictly.
+     * This is essentially an alias for assertSame().
+     *
+     * @throws ExpectationFailedException
+     */
+    final public static function assertArraysAreIdentical(array $expected, array $actual, string $message = ''): void
+    {
+        self::assertSame($expected, $actual, $message);
+    }
+
+    /**
+     * Assert that two arrays are equal.
+     *
+     * The (key, value) relationship matters, the order of the (key, value) pairs in the array matters, and keys as well as values are compared loosely.
+     *
+     * @throws ExpectationFailedException
+     */
+    final public static function assertArraysAreEqual(array $expected, array $actual, string $message = ''): void
+    {
+    }
+
+    /**
+     * Assert that two arrays are identical while ignoring the order of their values.
+     *
+     * The (key, value) relationship matters, the order of the (key, value) pairs in the array does not matter, and keys as well as values are compared strictly.
+     *
+     * @throws ExpectationFailedException
+     */
+    final public static function assertArraysAreIdenticalIgnoringOrder(array $expected, array $actual, string $message = ''): void
+    {
+    }
+
+    /**
+     * Assert that two arrays are equal while ignoring the order of their values.
+     *
+     * The (key, value) relationship matters, the order of the (key, value) pairs in the array does not matter, and keys as well as values are compared loosely.
+     * This is essentially an alias for assertEquals().
+     *
+     * @throws ExpectationFailedException
+     */
+    final public static function assertArraysAreEqualIgnoringOrder(array $expected, array $actual, string $message = ''): void
+    {
+        self::assertEquals($expected, $actual, $message);
+    }
+
+    /**
+     * Assert that two arrays have identical values.
+     *
+     * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array matters, and values are compared strictly.
+     *
+     * @throws ExpectationFailedException
+     */
+    final public static function assertArraysHaveIdenticalValues(array $expected, array $actual, string $message = ''): void
+    {
+    }
+
+    /**
+     * Assert that two arrays have equal values.
+     *
+     * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array matters, and values are compared loosely.
+     *
+     * @throws ExpectationFailedException
+     */
+    final public static function assertArraysHaveEqualValues(array $expected, array $actual, string $message = ''): void
+    {
+    }
+
+    /**
+     * Assert that two arrays have identical values while ignoring the order of these values.
+     *
+     * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array does not matter, and values are compared strictly.
+     *
+     * @throws ExpectationFailedException
+     */
+    final public static function assertArraysHaveIdenticalValuesIgnoringOrder(array $expected, array $actual, string $message = ''): void
+    {
+    }
+
+    /**
+     * Assert that two arrays have equal values while ignoring the order of these values.
+     *
+     * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array does not matter, and values are compared loosely.
+     *
+     * @throws ExpectationFailedException
+     */
+    final public static function assertArraysHaveEqualValuesIgnoringOrder(array $expected, array $actual, string $message = ''): void
+    {
+        self::assertEqualsCanonicalizing($expected, $actual, $message);
+    }
+
+    /**
      * Asserts that a haystack contains a needle.
      *
      * @param iterable<mixed> $haystack
