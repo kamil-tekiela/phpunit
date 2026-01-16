@@ -230,8 +230,6 @@ abstract class Assert
      *
      * @param array<mixed> $expected
      * @param array<mixed> $actual
-     *
-     * @throws ExpectationFailedException
      */
     final public static function assertArraysAreEqual(array $expected, array $actual, string $message = ''): void
     {
@@ -244,8 +242,6 @@ abstract class Assert
      *
      * @param array<mixed> $expected
      * @param array<mixed> $actual
-     *
-     * @throws ExpectationFailedException
      */
     final public static function assertArraysAreIdenticalIgnoringOrder(array $expected, array $actual, string $message = ''): void
     {
@@ -274,8 +270,6 @@ abstract class Assert
      *
      * @param array<mixed> $expected
      * @param array<mixed> $actual
-     *
-     * @throws ExpectationFailedException
      */
     final public static function assertArraysHaveIdenticalValues(array $expected, array $actual, string $message = ''): void
     {
@@ -288,8 +282,6 @@ abstract class Assert
      *
      * @param array<mixed> $expected
      * @param array<mixed> $actual
-     *
-     * @throws ExpectationFailedException
      */
     final public static function assertArraysHaveEqualValues(array $expected, array $actual, string $message = ''): void
     {
@@ -302,8 +294,6 @@ abstract class Assert
      *
      * @param array<mixed> $expected
      * @param array<mixed> $actual
-     *
-     * @throws ExpectationFailedException
      */
     final public static function assertArraysHaveIdenticalValuesIgnoringOrder(array $expected, array $actual, string $message = ''): void
     {
