@@ -224,18 +224,6 @@ abstract class Assert
     }
 
     /**
-     * Assert that two arrays are equal.
-     *
-     * The (key, value) relationship matters, the order of the (key, value) pairs in the array matters, and keys as well as values are compared loosely.
-     *
-     * @param array<mixed> $expected
-     * @param array<mixed> $actual
-     */
-    final public static function assertArraysAreEqual(array $expected, array $actual, string $message = ''): void
-    {
-    }
-
-    /**
      * Assert that two arrays are identical while ignoring the order of their values.
      *
      * The (key, value) relationship matters, the order of the (key, value) pairs in the array does not matter, and keys as well as values are compared strictly.
@@ -244,6 +232,42 @@ abstract class Assert
      * @param array<mixed> $actual
      */
     final public static function assertArraysAreIdenticalIgnoringOrder(array $expected, array $actual, string $message = ''): void
+    {
+    }
+
+    /**
+     * Assert that two arrays have identical values.
+     *
+     * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array matters, and values are compared strictly.
+     *
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
+     */
+    final public static function assertArraysHaveIdenticalValues(array $expected, array $actual, string $message = ''): void
+    {
+    }
+
+    /**
+     * Assert that two arrays have identical values while ignoring the order of these values.
+     *
+     * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array does not matter, and values are compared strictly.
+     *
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
+     */
+    final public static function assertArraysHaveIdenticalValuesIgnoringOrder(array $expected, array $actual, string $message = ''): void
+    {
+    }
+
+    /**
+     * Assert that two arrays are equal.
+     *
+     * The (key, value) relationship matters, the order of the (key, value) pairs in the array matters, and keys as well as values are compared loosely.
+     *
+     * @param array<mixed> $expected
+     * @param array<mixed> $actual
+     */
+    final public static function assertArraysAreEqual(array $expected, array $actual, string $message = ''): void
     {
     }
 
@@ -264,18 +288,6 @@ abstract class Assert
     }
 
     /**
-     * Assert that two arrays have identical values.
-     *
-     * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array matters, and values are compared strictly.
-     *
-     * @param array<mixed> $expected
-     * @param array<mixed> $actual
-     */
-    final public static function assertArraysHaveIdenticalValues(array $expected, array $actual, string $message = ''): void
-    {
-    }
-
-    /**
      * Assert that two arrays have equal values.
      *
      * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array matters, and values are compared loosely.
@@ -284,18 +296,6 @@ abstract class Assert
      * @param array<mixed> $actual
      */
     final public static function assertArraysHaveEqualValues(array $expected, array $actual, string $message = ''): void
-    {
-    }
-
-    /**
-     * Assert that two arrays have identical values while ignoring the order of these values.
-     *
-     * The (key, value) relationship does not matter, the order of the (key, value) pairs in the array does not matter, and values are compared strictly.
-     *
-     * @param array<mixed> $expected
-     * @param array<mixed> $actual
-     */
-    final public static function assertArraysHaveIdenticalValuesIgnoringOrder(array $expected, array $actual, string $message = ''): void
     {
     }
 
