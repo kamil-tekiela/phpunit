@@ -24,7 +24,7 @@ use stdClass;
 final class assertArraysAreIdenticalTest extends TestCase
 {
     /**
-     * @return non-empty-list<array{0: array<mixed>, 1: array<mixed>}>
+     * @return non-empty-array<non-empty-string, array{0: array<mixed>, 1: array<mixed>}>
      */
     public static function successProvider(): array
     {
@@ -99,7 +99,7 @@ final class assertArraysAreIdenticalTest extends TestCase
     }
 
     /**
-     * @return non-empty-list<array{0: array<mixed>, 1: array<mixed>}>
+     * @return non-empty-array<non-empty-string, array{0: non-empty-string, 1: array<mixed>, 2: array<mixed>}>
      */
     public static function failureProvider(): array
     {
