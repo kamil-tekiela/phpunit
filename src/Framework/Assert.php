@@ -16,6 +16,7 @@ use function count;
 use function file_get_contents;
 use function interface_exists;
 use function is_bool;
+use function ksort;
 use ArrayAccess;
 use Countable;
 use Generator;
@@ -230,9 +231,15 @@ abstract class Assert
      *
      * @param array<mixed> $expected
      * @param array<mixed> $actual
+     *
+     * @throws ExpectationFailedException
      */
     final public static function assertArraysAreIdenticalIgnoringOrder(array $expected, array $actual, string $message = ''): void
     {
+        ksort($expected);
+        ksort($actual);
+
+        self::assertSame($expected, $actual, $message);
     }
 
     /**
